@@ -14,8 +14,8 @@
 
 # DESCRIPTION
 
-Low latency and unified cryptocurrency market data feed and order execution connector developed in c++11.
-Market data and order update are done via websocket if available. To ensure scalability and data loss prevention it has been developed on top of kafka stream and custom MySQL connection pool that efficently re-use open connections to insert new LTP (Latest Traded Price) or others updates in real-time. 
+Low latency and unified cryptocurrency market data connector developed in c++17 for Linux.
+Market data and order update are done via websocket if available. To ensure scalability and data loss prevention it has been developed on top of kafka stream. 
 
 # SUPPORTED EXCHANGES (futures trading) 
 
@@ -47,13 +47,13 @@ export LD_LIBRARY_PATH=/usr/local/jsoncpp/lib64:/usr/local/libwebsockets/lib:$LD
 
 ``` bash
 cd ence-connectorss
-ln -s libs-mysql libs
+ln -s libs-nodb libs
 ```
 
 # ADD EXCHANGES API KEYS
 
 - for each exchange you like to use:
-    - edit [EXCHANGE_NAME].txt and replace words that starts with YOUR_[EXCHANGE_NAME]_API_ with respective values
+    - edit [EXCHANGE_NAME].txt and replace words that starts with YOUR_API_KEY and  YOUR_API_SECRET
 
 
 # HOW TO RUN
