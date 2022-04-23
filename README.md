@@ -43,10 +43,12 @@ export LD_LIBRARY_PATH=/usr/local/boost/lib:/usr/local/librdkafka/lib64:$LD_LIBR
 export LD_LIBRARY_PATH=/usr/local/jsoncpp/lib64:/usr/local/libwebsockets/lib:$LD_LIBRARY_PATH
 ```
 
-# TO USE MYSQL DO
+# TO USE DO
 
 ``` bash
-cd ence-connectorss
+git clone https://github.com/domGitDev/ence-connectors.git 
+cd ence-connectors
+unzip ence-connectors.zip
 ln -s libs-nodb libs
 ```
 
