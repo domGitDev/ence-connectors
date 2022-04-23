@@ -59,9 +59,9 @@ ln -s libs-nodb libs
 # HOW TO RUN
 
 ```
-./connector -t dbtfutbook -d obook -e deribit -f 1 > dbtobook.log &
-./connector -t dbtfutprice -d price -e deribit -f 1 > dbtprices.log &
-./connector -t dbtfut -d orders -e deribit -v 1 -f 1 > dbtexecution.log &
+./connector -t bncfutbook -d obook -e binance -f 1 > bncobook.log &
+./connector -t bncfutprice -d price -e binance -f 1 > bncprices.log &
+./connector -t bncfut -d orders -e binance -v 1 -f 1 > bncexecution.log &
 ```
 
 # SUBSCRIBE KAFKA CONSUMER FOR UPDATES VIA TOPICS
@@ -87,8 +87,9 @@ python consumer.py -b 127.0.0.1:9092 -t bncobook
 ```
 
 - Price output example
-
+```
 [Symbol, Date, time, second, millisecond, price, quantity, side, timestamp]
+```
 ```
 ['BTCUSDT', '20220423', '1830', 23, 224, 39775.1, 0.008, -1, 1650738623224]
 ['BTCUSDT', '20220423', '1830', 23, 296, 39775.0, 0.057, 1, 1650738623296]
@@ -96,8 +97,10 @@ python consumer.py -b 127.0.0.1:9092 -t bncobook
 ```
 
 - order book output example
-
+```
 [Symbol, timestamp, updateId, snapshot/changes, bid=[[price, quantity]], ask=[[price, quantity]]]
+```
+
 ```
 ['BTCUSDT', 1650738956852, 1421997336645, 'change', [[39728.3, 2.197], [39728.1, 0.001], [39728.0, 0.017], [39727.5, 0.001], [39727.2, 4.034]], [[39728.4, 0.988], [39728.9, 0.699], [39729.0, 0.011], [39729.4, 0.003], [39729.5, 0.003]]]
 ```
