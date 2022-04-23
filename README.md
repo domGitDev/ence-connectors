@@ -34,7 +34,7 @@ cd scripts
 sudo ./install_libraries.sh
 ```
 
-# ADD TO ~/.bashrc
+### ADD TO ~/.bashrc
 
 ``` bash
 export LD_LIBRARY_PATH=/usr/local/openssl/lib:/usr/local/cppkafka/lib:$LD_LIBRARY_PATH
@@ -43,7 +43,7 @@ export LD_LIBRARY_PATH=/usr/local/boost/lib:/usr/local/librdkafka/lib64:$LD_LIBR
 export LD_LIBRARY_PATH=/usr/local/jsoncpp/lib64:/usr/local/libwebsockets/lib:$LD_LIBRARY_PATH
 ```
 
-# TO USE DO
+### GET Connections
 
 ``` bash
 git clone https://github.com/domGitDev/ence-connectors.git 
@@ -52,13 +52,13 @@ unzip ence-connectors.zip
 ln -s libs-nodb libs
 ```
 
-# ADD EXCHANGES API KEYS
+### ADD EXCHANGES API KEYS
 
 - for each exchange you like to use:
     - edit [EXCHANGE_NAME].txt and replace words that starts with YOUR_API_KEY and  YOUR_API_SECRET
 
 
-# HOW TO RUN
+### HOW TO RUN
 
 ```
 ./connector -t bncfutbook -d obook -e binance -f 1 > bncobook.log &
@@ -72,7 +72,7 @@ ln -s libs-nodb libs
 - OKX TOPICS: okxbook; okxprice; okxupdates
 
 
-# EXAMPLE
+### EXAMPLE
 
 ``` bash
 cd ence-connectors/scrips
